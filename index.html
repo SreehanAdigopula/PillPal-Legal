@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="PillPal iOS app — Privacy Policy, Medical Disclaimer, and Terms of Use. Developer: Sreehan Adigopula, trading as Adigopula Solutions." />
+  <title>PillPal — Privacy Policy, Medical Disclaimer &amp; Terms of Use</title>
+  <style>
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── Base ── */
+    :root {
+      --red:      #c22e33;
+      --amber:    #b87408;
+      --blue:     #2a5ab8;
+      --green:    #1e8c4f;
+      --violet:   #6d58bf;
+      --fg:       #111;
+      --fg-muted: #555;
+      --bg:       #f8f8f8;
+      --card:     #fff;
+      --border:   #e0e0e0;
+      --radius:   10px;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--fg);
+      background: var(--bg);
+    }
+
+    /* ── Layout ── */
+    .page-wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 80px; }
+
+    /* ── Header ── */
+    .site-header {
+      text-align: center;
+      padding: 48px 0 36px;
+      border-bottom: 2px solid var(--border);
+      margin-bottom: 48px;
+    }
+    .app-icon {
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+    .app-icon img {
+      width: 88px;
+      height: 88px;
+      border-radius: 20px;
+      display: block;
+      box-shadow: 0 4px 18px rgba(74, 86, 193, 0.28);
+    }
+    .site-header h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.5px; }
+    .site-header p  { color: var(--fg-muted); margin-top: 6px; font-size: 0.95rem; }
+    .nav-pills {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
+      margin-top: 24px;
+    }
+    .nav-pills a {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 6px 18px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--blue);
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .nav-pills a:hover { background: #eef2ff; }
+
+    /* ── Emergency banner ── */
+    .emergency {
+      background: var(--red);
+      color: white;
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      margin-bottom: 40px;
+    }
+    .emergency h2 { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; }
+    .emergency p  { font-size: 0.9rem; opacity: 0.92; }
+    .emergency a  { color: white; font-weight: 700; }
+
+    /* ── Section title ── */
+    .doc-section { margin-bottom: 56px; scroll-margin-top: 20px; }
+    .doc-section > h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      border-bottom: 2px solid var(--fg);
+      padding-bottom: 8px;
+      margin-bottom: 24px;
+    }
+    .effective {
+      font-size: 0.8rem;
+      color: var(--fg-muted);
+      margin-top: -18px;
+      margin-bottom: 24px;
+    }
+
+    /* ── Cards ── */
+    .card {
+      background: var(--card);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      margin-bottom: 16px;
+    }
+    .card.red    { border-color: #e0a0a2; background: #fff8f8; }
+    .card.amber  { border-color: #e0c890; background: #fffdf5; }
+    .card.green  { border-color: #9ed4b4; background: #f5fff9; }
+    .card.blue   { border-color: #a8c0e8; background: #f5f8ff; }
+    .card.violet { border-color: #c0b0e8; background: #f8f5ff; }
+
+    .card-header {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 12px;
+    }
+    .card-icon {
+      width: 34px; height: 34px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-size: 1rem;
+    }
+    .card.red    .card-icon { background: #fce8e8; }
+    .card.amber  .card-icon { background: #fdf0cc; }
+    .card.green  .card-icon { background: #d4f0e4; }
+    .card.blue   .card-icon { background: #dce8fa; }
+    .card.violet .card-icon { background: #e4d8f8; }
+
+    .card-header h3 { font-size: 1rem; font-weight: 700; }
+    .card.red    .card-header h3 { color: var(--red); }
+    .card.amber  .card-header h3 { color: var(--amber); }
+    .card.green  .card-header h3 { color: var(--green); }
+    .card.blue   .card-header h3 { color: var(--blue); }
+    .card.violet .card-header h3 { color: var(--violet); }
+
+    /* ── Text in cards ── */
+    .card p, .card li { font-size: 0.925rem; color: #333; }
+    .card p + p { margin-top: 8px; }
+    .card ul { list-style: none; margin-top: 8px; }
+    .card ul li {
+      display: flex; align-items: flex-start; gap: 8px;
+      padding: 3px 0;
+    }
+    .card ul li::before {
+      content: "•";
+      flex-shrink: 0;
+      color: var(--fg-muted);
+      margin-top: 1px;
+    }
+    .card.red ul li::before    { content: "✕"; color: var(--red); font-size: 0.75rem; }
+    .card.green ul li::before  { content: "✓"; color: var(--green); font-size: 0.85rem; }
+
+    /* AS-IS warning */
+    .asis {
+      font-weight: 700;
+      color: var(--red);
+      font-size: 0.95rem;
+      background: #fff0f0;
+      border: 1.5px solid #f0b0b0;
+      border-radius: 6px;
+      padding: 10px 14px;
+      margin-bottom: 10px;
+    }
+
+    /* ── Footer ── */
+    .site-footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--fg-muted);
+      text-align: center;
+    }
+    .site-footer a { color: var(--blue); }
+
+    /* ── Support box ── */
+    .support-box {
+      background: var(--card);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      text-align: center;
+    }
+    .support-box h3 { font-size: 1.1rem; margin-bottom: 8px; }
+    .support-box p  { font-size: 0.9rem; color: var(--fg-muted); margin-bottom: 14px; }
+    .support-box a  {
+      display: inline-block;
+      background: var(--blue);
+      color: white;
+      font-weight: 600;
+      padding: 10px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .support-box a:hover { background: #1e48a8; }
+
+    @media (max-width: 500px) {
+      .site-header h1 { font-size: 1.5rem; }
+      .card { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-wrap">
+
+  <!-- ── Header ── -->
+  <header class="site-header">
+    <div class="app-icon">
+      <img src="./PillPalBrandIcon.png" alt="PillPal App Icon" />
+    </div>
+    <h1>PillPal</h1>
+    <p>Medication Reminder &amp; Reference Tool &nbsp;·&nbsp; Adigopula Solutions</p>
+    <nav class="nav-pills">
+      <a href="#privacy">Privacy Policy</a>
+      <a href="#disclaimer">Medical Disclaimer</a>
+      <a href="#terms">Terms of Use</a>
+      <a href="#support">Support</a>
+    </nav>
+  </header>
+
+  <!-- ── About PillPal ── -->
+  <div class="card blue" style="margin-bottom:28px;">
+    <div class="card-header">
+      <div class="card-icon">&#x1F48A;</div>
+      <h3>About PillPal</h3>
+    </div>
+    <p>
+      PillPal is an iOS medication reminder and reference application designed to help individuals
+      organize their medication schedules, review dose adherence history, and look up publicly
+      available drug label information from the U.S. Food &amp; Drug Administration's OpenFDA database.
+    </p>
+    <p style="margin-top:8px;">
+      <strong>Platform:</strong> iOS (iPhone &amp; iPad) &nbsp;·&nbsp;
+      <strong>Developer:</strong> Adigopula Solutions (Sreehan Adigopula) &nbsp;·&nbsp;
+      <strong>Available on:</strong> Apple App Store &nbsp;·&nbsp;
+      <strong>Version:</strong> 1.0
+    </p>
+    <p style="margin-top:8px; font-size:0.875rem; color:#555;">
+      PillPal is not a medical device and does not provide medical advice.
+      See the Medical Disclaimer below for full details.
+    </p>
+  </div>
+
+  <!-- ── Emergency Banner ── -->
+  <div class="emergency">
+    <h2>&#x1F6A8; Medical Emergency — Call 911</h2>
+    <p>
+      If you are experiencing a medical emergency, call
+      <a href="tel:911">9-1-1</a> immediately.
+      For Poison Control (U.S.) call <a href="tel:18002221222">1-800-222-1222</a>.
+      Do NOT use PillPal to seek emergency help.
+    </p>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 1 — PRIVACY POLICY
+  ════════════════════════════════════════ -->
+  <section class="doc-section" id="privacy">
+    <h2>Privacy Policy</h2>
+    <p class="effective">Effective: August 9, 2026 &nbsp;·&nbsp; Last Reviewed: August 9, 2026</p>
+
+    <div class="card blue">
+      <div class="card-header">
+        <div class="card-icon">&#x1F4F1;</div>
+        <h3>Local-First Design</h3>
+      </div>
+      <p>
+        PillPal is designed as a local-first application. Your medication records, dose history,
+        reminder schedules, and adherence data are stored exclusively on your device.
+        PillPal has no user account, no sign-in, and no server that stores your personal information.
+      </p>
+    </div>
+
+    <div class="card blue">
+      <div class="card-header">
+        <div class="card-icon">&#x1F512;</div>
+        <h3>Data Stored On Your Device Only</h3>
+      </div>
+      <ul>
+        <li>Medication names and user-entered dose text</li>
+        <li>Reminder times and schedule configurations</li>
+        <li>Dose outcome history, recorded timestamps, missed-dose status, and adherence summaries</li>
+        <li>Snooze event history</li>
+        <li>Cached OpenFDA drug label snapshots</li>
+        <li>App lock, appearance, time zone, and reminder delivery preferences</li>
+      </ul>
+    </div>
+
+    <div class="card amber">
+      <div class="card-header">
+        <div class="card-icon">&#x1F310;</div>
+        <h3>Data Sent Off Your Device</h3>
+      </div>
+      <p>PillPal transmits data off your device in only two limited circumstances:</p>
+      <ul>
+        <li>
+          <strong>Medication name text</strong> — sent to the U.S. Food &amp; Drug Administration's public
+          OpenFDA API (<code>api.fda.gov</code>) when you request a drug label check.
+          This text is not linked to any user account, identifier, or personal profile.
+        </li>
+        <li>
+          <strong>Voice audio or transcription</strong> — sent to Apple's Speech Recognition service
+          only if your device does not support on-device recognition and you choose to use
+          the optional voice input feature. Governed by Apple's privacy policy.
+        </li>
+        <li>
+          <strong>Standard network metadata</strong> (such as IP address) may be visible to
+          OpenFDA or Apple as part of the above requests. PillPal does not control this.
+        </li>
+      </ul>
+    </div>
+
+    <div class="card green">
+      <div class="card-header">
+        <div class="card-icon">&#x1F6AB;</div>
+        <h3>Data PillPal Does Not Collect</h3>
+      </div>
+      <ul>
+        <li>No user account, registration, or sign-in</li>
+        <li>No analytics or crash-reporting SDK</li>
+        <li>No advertising SDK or ad network</li>
+        <li>No iCloud or CloudKit sync in this version</li>
+        <li>No caregiver or third-party data sharing</li>
+        <li>No access to Contacts, Photos, Calendar, Location, or HealthKit records</li>
+        <li>No device fingerprinting or cross-app tracking</li>
+        <li>No advertising identifier (IDFA)</li>
+      </ul>
+    </div>
+
+    <div class="card violet">
+      <div class="card-header">
+        <div class="card-icon">&#x270B;</div>
+        <h3>Permissions PillPal May Request</h3>
+      </div>
+      <ul>
+        <li><strong>Notifications</strong> — to deliver medication reminders with sound and action buttons</li>
+        <li><strong>Alarm permission</strong> — for system-style alarms on supported iOS 26.1+ devices; standard notifications used as fallback</li>
+        <li><strong>Face ID / Device Authentication</strong> — for the optional app-lock feature; data stays on device</li>
+        <li><strong>Microphone &amp; Speech Recognition</strong> — only when you explicitly choose voice input for medication entry</li>
+      </ul>
+      <p style="margin-top:10px; font-size:0.875rem; color:#555;">
+        All permissions are optional except notifications, which are required for reminders to function.
+        You can revoke any permission at any time in iOS Settings.
+      </p>
+    </div>
+
+    <div class="card blue">
+      <div class="card-header">
+        <div class="card-icon">&#x1F5C1;</div>
+        <h3>Third-Party Services</h3>
+      </div>
+      <ul>
+        <li>
+          <strong>OpenFDA API</strong> (<code>open.fda.gov</code>) — U.S. Government public domain drug label data.
+          Governed by FDA's terms of service. PillPal sends medication name text; no user identity is transmitted.
+        </li>
+        <li>
+          <strong>Apple Speech Recognition</strong> — Optional; used only if you choose voice input and
+          on-device recognition is unavailable. Governed by Apple's privacy policy
+          (<code>apple.com/legal/privacy</code>).
+        </li>
+      </ul>
+    </div>
+
+    <div class="card red">
+      <div class="card-header">
+        <div class="card-icon">&#x1F5D1;</div>
+        <h3>Data Deletion</h3>
+      </div>
+      <p>
+        You can permanently delete all PillPal data at any time via <strong>Settings → Delete Data → Delete All My Data</strong>.
+        This removes medication records, dose history, snooze history, cached label checks, URL cache,
+        and all pending local reminders from your device. This action cannot be undone.
+      </p>
+      <p style="margin-top:8px;">
+        You may also clear older history selectively via <strong>Settings → Clear History</strong>.
+      </p>
+    </div>
+
+    <div class="card blue">
+      <div class="card-header">
+        <div class="card-icon">&#x1F4CB;</div>
+        <h3>Children's Privacy</h3>
+      </div>
+      <p>
+        PillPal is intended for users aged 18 and older, or minors with parental or guardian consent and supervision.
+        PillPal does not knowingly collect personal information from children under 13.
+        If you believe a child under 13 has used PillPal, please contact us so we can address this.
+      </p>
+    </div>
+
+    <div class="card blue">
+      <div class="card-header">
+        <div class="card-icon">&#x1F504;</div>
+        <h3>Changes to This Privacy Policy</h3>
+      </div>
+      <p>
+        This Privacy Policy may be updated when new versions of PillPal are released.
+        The effective date at the top of this document reflects the most recent revision.
+        Continued use of PillPal after an update constitutes acceptance of the revised policy.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 2 — MEDICAL DISCLAIMER
+  ════════════════════════════════════════ -->
+  <section class="doc-section" id="disclaimer">
+    <h2>Medical Disclaimer</h2>
+    <p class="effective">Effective: August 9, 2026 &nbsp;·&nbsp; Last Reviewed: August 9, 2026</p>
+
+    <div class="card red">
+      <div class="card-header">
+        <div class="card-icon">&#x26A0;&#xFE0F;</div>
+        <h3>§ 1 — Regulatory Status</h3>
+      </div>
+      <p>
+        PillPal is a <strong>personal wellness reminder application</strong>.
+        It is <strong>NOT a medical device</strong>.
+      </p>
+      <p style="margin-top:8px;">
+        PillPal has not been cleared or approved by the U.S. Food and Drug Administration (FDA)
+        as a medical device under 21 U.S.C. § 321(h) or 21 CFR Part 880.
+        It does not meet the definition of Software as a Medical Device (SaMD) under
+        International Medical Device Regulators Forum (IMDRF) guidance.
+      </p>
+      <p style="margin-top:8px; font-size:0.875rem; color:#555;">
+        Official references: <a href="https://www.fda.gov/medical-devices" target="_blank" rel="noopener">fda.gov/medical-devices</a>
+        &nbsp;·&nbsp; <a href="https://www.imdrf.org" target="_blank" rel="noopener">imdrf.org</a>
+      </p>
+    </div>
+
+    <div class="card red">
+      <div class="card-header">
+        <div class="card-icon">&#x274C;</div>
+        <h3>§ 2 — No Medical Advice</h3>
+      </div>
+      <p style="font-weight:700; color:var(--red); margin-bottom:8px;">PillPal does NOT:</p>
+      <ul>
+        <li>Provide medical advice, diagnosis, or treatment</li>
+        <li>Calculate, recommend, or verify medication dosage</li>
+        <li>Instruct you to start, stop, skip, delay, or modify any medication</li>
+        <li>Replace instructions from a licensed physician, pharmacist, or healthcare provider</li>
+        <li>Create a patient-provider or therapeutic relationship of any kind</li>
+        <li>Monitor your health in real time or provide emergency support</li>
+      </ul>
+      <p style="margin-top:10px; font-size:0.9rem;">
+        Always confirm medication decisions with a licensed doctor or pharmacist.
+      </p>
+    </div>
+
+    <div class="card red">
+      <div class="card-header">
+        <div class="card-icon">&#x26A0;&#xFE0F;</div>
+        <h3>§ 3 — No Warranty — Provided "AS IS"</h3>
+      </div>
+      <div class="asis">
+        THIS APPLICATION IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTY OF ANY KIND.
+      </div>
+      <p>
+        The developer expressly disclaims all warranties, whether express, implied, statutory,
+        or otherwise, including without limitation any implied warranty of merchantability,
+        fitness for a particular purpose, accuracy, completeness, timeliness, or reliability
+        of information, and any warranty that the application will be uninterrupted or error-free.
+      </p>
+      <p style="margin-top:8px;">
+        No oral or written information provided by the developer creates any warranty not
+        expressly stated herein.
+      </p>
+    </div>
+
+    <div class="card blue">
+      <div class="card-header">
+        <div class="card-icon">&#x1F64B;</div>
+        <h3>§ 4 — Voluntary Use &amp; User Responsibility</h3>
+      </div>
+      <p>Use of PillPal is entirely voluntary and at your sole discretion.</p>
+      <ul>
+        <li>You bear full responsibility for all medication decisions</li>
+        <li>Maintain independent, clinician-supervised medication management at all times</li>
+        <li>Do not rely solely on PillPal reminders for critical or life-sustaining medications</li>
+        <li>Consult a licensed healthcare professional before making any medication change</li>
+      </ul>
+    </div>
+
+    <div class="card blue">
+      <div class="card-header">
+        <div class="card-icon">&#x1F4C4;</div>
+        <h3>§ 5 — OpenFDA Drug Label Information</h3>
+      </div>
+      <ul>
+        <li>Sourced from the public openFDA API at <a href="https://open.fda.gov" target="_blank" rel="noopener">open.fda.gov</a></li>
+        <li>Is public reference data — not a clinical review, prescription check, or FDA endorsement of PillPal</li>
+        <li>May be incomplete, outdated, unavailable, or not applicable to your specific situation</li>
+        <li>May not include every warning, interaction, contraindication, brand, generic, dose, or formulation</li>
+        <li>Absence of a warning does NOT mean a medication or combination is safe for you</li>
+      </ul>
+      <p style="margin-top:8px; font-size:0.875rem; color:#555;">
+        Official reference: <a href="https://open.fda.gov" target="_blank" rel="noopener">open.fda.gov</a>
+        &nbsp;·&nbsp; <a href="https://www.fda.gov/drugs" target="_blank" rel="noopener">fda.gov/drugs</a>
+      </p>
+    </div>
+
+    <div class="card amber">
+      <div class="card-header">
+        <div class="card-icon">&#x1F514;</div>
+        <h3>§ 6 — Reminder &amp; Adherence Limitations</h3>
+      </div>
+      <p>Reminder delivery depends on multiple factors outside PillPal's control:</p>
+      <ul>
+        <li>Device notification and alarm permissions granted by you</li>
+        <li>iOS version, device model, battery state, Do Not Disturb, and Focus mode settings</li>
+        <li>Accuracy of medication data, dose times, and statuses you enter</li>
+        <li>Network availability for OpenFDA label lookups</li>
+      </ul>
+      <p style="margin-top:8px;">
+        Adherence records are supporting notes for clinician discussions —
+        they are <strong>not</strong> an official or legally recognized medical record.
+      </p>
+    </div>
+
+    <div class="card violet">
+      <div class="card-header">
+        <div class="card-icon">&#x1F3DB;&#xFE0F;</div>
+        <h3>§ 7 — Official References &amp; Effective Date</h3>
+      </div>
+      <ul>
+        <li>U.S. Food &amp; Drug Administration: <a href="https://www.fda.gov" target="_blank" rel="noopener">fda.gov</a></li>
+        <li>OpenFDA Drug Data API: <a href="https://open.fda.gov" target="_blank" rel="noopener">open.fda.gov</a></li>
+        <li>IMDRF SaMD Guidance: <a href="https://www.imdrf.org" target="_blank" rel="noopener">imdrf.org</a></li>
+        <li>National Emergency Number (U.S.): <a href="tel:911">9-1-1</a></li>
+        <li>Poison Control Center (U.S.): <a href="tel:18002221222">1-800-222-1222</a></li>
+      </ul>
+      <p style="margin-top:8px; font-size:0.875rem; color:#555;">
+        Effective Date: August 9, 2026. Continued use of PillPal constitutes acceptance of the
+        current version of this disclaimer.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 3 — TERMS OF USE
+  ════════════════════════════════════════ -->
+  <section class="doc-section" id="terms">
+    <h2>Terms of Use &amp; Software License</h2>
+    <p class="effective">Effective: August 9, 2026 &nbsp;·&nbsp; Last Reviewed: August 9, 2026</p>
+
+    <div class="card blue">
+      <div class="card-header">
+        <div class="card-icon">&#x1F4C4;</div>
+        <h3>§ 1 — License Grant</h3>
+      </div>
+      <p>
+        PillPal grants you a limited, personal, non-commercial, non-exclusive, non-transferable,
+        revocable license to install and use this application on Apple-branded devices you own
+        or control, subject to these Terms of Use.
+      </p>
+      <p style="margin-top:8px;">
+        This license is granted in accordance with the Apple Media Services Terms of Service and
+        the Apple App Store Review Guidelines. You may not sublicense, sell, resell, transfer,
+        assign, or otherwise commercially exploit this application.
+      </p>
+    </div>
+
+    <div class="card red">
+      <div class="card-header">
+        <div class="card-icon">&#x26A0;&#xFE0F;</div>
+        <h3>§ 2 — Disclaimer of Warranties</h3>
+      </div>
+      <div class="asis">
+        TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, PILLPAL IS PROVIDED "AS IS"
+        AND "AS AVAILABLE" WITHOUT ANY WARRANTY WHATSOEVER.
+      </div>
+      <p>
+        The developer disclaims all warranties, express or implied, including but not limited
+        to implied warranties of merchantability, fitness for a particular purpose, title,
+        and non-infringement.
+      </p>
+      <p style="margin-top:8px;">
+        Apple Inc. makes no warranty with respect to PillPal. Any claims relating to this
+        application must be directed to the developer, not Apple.
+      </p>
+    </div>
+
+    <div class="card amber">
+      <div class="card-header">
+        <div class="card-icon">&#x26A0;&#xFE0F;</div>
+        <h3>§ 3 — Limitation of Liability</h3>
+      </div>
+      <p style="font-weight:600; color:var(--amber);">
+        TO THE FULLEST EXTENT PERMITTED BY LAW, THE DEVELOPER SHALL NOT BE LIABLE FOR:
+      </p>
+      <ul>
+        <li>Any indirect, incidental, special, punitive, or consequential damages</li>
+        <li>Missed medication doses, incorrect medication decisions, or adverse health outcomes</li>
+        <li>Inaccuracy, incompleteness, or unavailability of drug label information</li>
+        <li>Application unavailability, data loss, or notification delivery failures</li>
+        <li>Any damages arising from reliance on the application in a medical situation</li>
+      </ul>
+      <p style="margin-top:8px; font-size:0.875rem;">
+        In jurisdictions that do not allow exclusion or limitation of certain damages,
+        the developer's liability is limited to the maximum extent permitted by applicable law.
+      </p>
+    </div>
+
+    <div class="card green">
+      <div class="card-header">
+        <div class="card-icon">&#x2705;</div>
+        <h3>§ 4 — User Responsibilities</h3>
+      </div>
+      <ul>
+        <li>Enter accurate medication names, doses, and schedule times</li>
+        <li>Maintain independent, clinician-supervised medication management</li>
+        <li>Grant required device permissions for reminders to function</li>
+        <li>Consult a licensed healthcare professional for all medication decisions</li>
+        <li>Call 911 or local emergency services immediately in any medical emergency</li>
+      </ul>
+    </div>
+
+    <div class="card blue">
+      <div class="card-header">
+        <div class="card-icon">&#x1F310;</div>
+        <h3>§ 5 — Third-Party Services</h3>
+      </div>
+      <p>PillPal integrates the following third-party services, each governed by their own terms:</p>
+      <ul>
+        <li>
+          <strong>OpenFDA API</strong> (<a href="https://open.fda.gov" target="_blank" rel="noopener">open.fda.gov</a>)
+          — U.S. Government public domain drug label data
+        </li>
+        <li>
+          <strong>Apple Speech Recognition</strong> — Optional; used only when you choose voice input
+        </li>
+      </ul>
+      <p style="margin-top:8px; font-size:0.875rem;">
+        PillPal is not responsible for the availability, accuracy, or content of third-party services.
+      </p>
+    </div>
+
+    <div class="card violet">
+      <div class="card-header">
+        <div class="card-icon">&#x1F3DB;&#xFE0F;</div>
+        <h3>§ 6 — Governing Law</h3>
+      </div>
+      <p>
+        These Terms are governed by the laws of the United States. Any dispute arising from use
+        of PillPal shall first be attempted to be resolved informally, then through binding
+        arbitration or a court of competent jurisdiction.
+      </p>
+      <p style="margin-top:8px;">
+        Apple Inc. and its subsidiaries are third-party beneficiaries of these Terms and
+        may enforce them against you.
+      </p>
+    </div>
+
+    <div class="card blue">
+      <div class="card-header">
+        <div class="card-icon">&#x1F504;</div>
+        <h3>§ 7 — Changes to Terms</h3>
+      </div>
+      <p>
+        These Terms may be updated with new versions of PillPal. The effective date at the
+        top of this document reflects the most recent revision. Continued use of PillPal
+        after an update constitutes acceptance of the revised Terms.
+      </p>
+    </div>
+
+    <div class="card green">
+      <div class="card-header">
+        <div class="card-icon">&#x2705;</div>
+        <h3>§ 8 — Agreement to Terms</h3>
+      </div>
+      <p>By installing or using PillPal, you confirm that you:</p>
+      <ul>
+        <li>Are 18 years of age or older, or have appropriate parental or guardian consent</li>
+        <li>Have read, understood, and agree to these Terms of Use</li>
+        <li>Have read and understood the Medical Disclaimer above</li>
+        <li>Have read and understood the Privacy Policy above</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 4 — SUPPORT
+  ════════════════════════════════════════ -->
+  <section class="doc-section" id="support">
+    <h2>Support</h2>
+    <div class="support-box">
+      <h3>Questions or Feedback?</h3>
+      <p>
+        For support requests, bug reports, or feedback about PillPal,
+        please contact the developer directly.
+      </p>
+      <a href="mailto:support.pillpal@gmail.com?subject=PillPal%20Support">
+        Contact Support
+      </a>
+      <p style="margin-top:14px; font-size:0.8rem;">
+        Adigopula Solutions &nbsp;·&nbsp; Sreehan Adigopula &nbsp;·&nbsp; App: PillPal &nbsp;·&nbsp; Platform: iOS
+      </p>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="site-footer">
+    <p>
+      &copy; 2026 Sreehan Adigopula, trading as Adigopula Solutions. All rights reserved.
+      &nbsp;·&nbsp;
+      PillPal is not affiliated with or endorsed by the U.S. Food &amp; Drug Administration.
+    </p>
+    <p style="margin-top:6px;">
+      OpenFDA data sourced from
+      <a href="https://open.fda.gov" target="_blank" rel="noopener">open.fda.gov</a>
+      (U.S. Government public domain).
+    </p>
+  </footer>
+
+</div><!-- /page-wrap -->
+
+</body>
+</html>
