@@ -238,7 +238,7 @@
     <p style="margin-top:8px;">
       <strong>Platform:</strong> iOS (iPhone &amp; iPad) &nbsp;·&nbsp;
       <strong>Developer:</strong> Adigopula Solutions (Sreehan Adigopula) &nbsp;·&nbsp;
-      <strong>Available on:</strong> Apple App Store &nbsp;·&nbsp;
+      <strong>Distribution:</strong> Apple App Store &nbsp;·&nbsp;
       <strong>Version:</strong> 1.0
     </p>
     <p style="margin-top:8px; font-size:0.875rem; color:#555;">
@@ -283,7 +283,7 @@
         <h3>Data Stored On Your Device Only</h3>
       </div>
       <ul>
-        <li>Medication names and user-entered dose text</li>
+        <li>Medication names, optional brand names, and user-entered dose text</li>
         <li>Reminder times and schedule configurations</li>
         <li>Dose outcome history, recorded timestamps, missed-dose status, and adherence summaries</li>
         <li>Snooze event history</li>
@@ -666,7 +666,9 @@
       <ul>
         <li>
           <strong>OpenFDA API</strong> (<a href="https://open.fda.gov" target="_blank" rel="noopener">open.fda.gov</a>)
-          — U.S. Government public domain drug label data
+          — U.S. Government public domain drug label data. When FDA Label Lookup is enabled,
+          PillPal sends medication name text and optional brand name text only; it does not send
+          user identity, dose history, schedules, device identifiers, or location.
         </li>
         <li>
           <strong>Apple Speech Recognition</strong> — Optional; used only when you choose voice input
